@@ -17,8 +17,8 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img
               src="/logos/App_Icon.png"
-              alt="Moxie Pulse"
-              className="h-10 w-10 rounded-xl"
+              alt="Moxie"
+              className="h-10 w-10 rounded-xl shadow-[0_0_35px_rgba(168,85,247,0.9)]"
             />
             <span className="tracking-[0.35em] text-sm font-semibold">
               MOXIE
@@ -26,8 +26,8 @@ export default function Home() {
           </div>
 
           <a
-            href="mailto:hello@moxiepulse.social"
-            className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 hover:bg-purple-500/20"
+            href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
+            className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:bg-purple-500/20"
           >
             Contact
           </a>
@@ -37,7 +37,7 @@ export default function Home() {
           <img
             src="/logos/App_Icon.png"
             alt="Moxie Logo"
-            className="mx-auto mb-8 h-32 w-32 rounded-[2rem] shadow-[0_0_60px_rgba(168,85,247,0.8)]"
+            className="mx-auto mb-8 h-32 w-32 rounded-[2rem] shadow-[0_0_90px_rgba(168,85,247,1)]"
           />
 
           <p className="mb-4 tracking-[0.55em] text-sm text-purple-300">
@@ -51,22 +51,26 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-zinc-300 md:text-xl">
+          <p className="mx-auto mb-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
             A new way to connect through proximity, shared interests,
             and real-world experiences.
           </p>
 
+          <p className="mx-auto mb-10 max-w-xl text-sm text-purple-200">
+            Want beta access? Email us and we’ll add you to the early list.
+          </p>
+
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:hello@moxiepulse.social?subject=Moxie Pulse Early Access"
-              className="rounded-full bg-purple-600 px-8 py-4 font-semibold hover:bg-purple-500"
+              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Early Access"
+              className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_40px_rgba(168,85,247,0.75)] hover:bg-purple-500"
             >
               Request Early Access
             </a>
 
             <a
               href="#concept"
-              className="rounded-full border border-purple-500 px-8 py-4 font-semibold text-purple-300 hover:bg-purple-500/20"
+              className="rounded-full border border-purple-500 px-8 py-4 font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:bg-purple-500/20"
             >
               Watch Concept
             </a>
@@ -78,7 +82,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
 
         <video
-          className="relative z-10 mb-8 h-72 w-72 rounded-full object-cover opacity-90 shadow-[0_0_90px_rgba(168,85,247,0.9)]"
+          className="relative z-10 mb-8 h-72 w-72 rounded-full object-cover opacity-90 shadow-[0_0_120px_rgba(168,85,247,1)]"
           src="/videos/Pulse_loading.mp4"
           autoPlay
           muted
@@ -96,8 +100,9 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto max-w-xl text-zinc-400">
-            Moxie Pulse is building a new layer for discovery, connection,
-            and real-world social energy.
+            Moxie is building a new layer for discovery, connection,
+            and real-world social energy — with Moxie Pulse as the wearable
+            signal companion.
           </p>
         </div>
       </section>
@@ -116,7 +121,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-purple-500/30 bg-white/5 shadow-[0_0_80px_rgba(168,85,247,0.35)]">
+        <div className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-purple-500/40 bg-white/5 shadow-[0_0_120px_rgba(168,85,247,0.55)]">
           <video
             className="h-full w-full object-cover"
             src="/videos/Concept_video_1.mp4"
@@ -133,7 +138,7 @@ export default function Home() {
           {["Discovery", "Connection", "Experiences", "Signal"].map((item) => (
             <div
               key={item}
-              className="rounded-3xl border border-purple-500/20 bg-white/[0.04] p-8 text-center backdrop-blur"
+              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-8 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
                 {item}
@@ -147,7 +152,16 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">
-        © 2026 Moxie Pulse. All rights reserved.
+        <p>© 2026 Moxie. All rights reserved.</p>
+        <p className="mt-2">moxiepulse.social</p>
+        <p className="mt-1">
+          <a
+            href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
+            className="text-purple-300 hover:text-purple-200"
+          >
+            moxiepulsesocial@gmail.com
+          </a>
+        </p>
       </footer>
     </main>
   );
