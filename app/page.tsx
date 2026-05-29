@@ -28,7 +28,7 @@ export default function Home() {
 
           <a
             href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
-            className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:bg-purple-500/20"
+            className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_40px_rgba(168,85,247,0.75)]"
           >
             Contact
           </a>
@@ -38,7 +38,7 @@ export default function Home() {
           <img
             src="/logos/App_Icon.png"
             alt="Moxie Logo"
-            className="mx-auto mb-8 h-32 w-32 rounded-[2rem] shadow-[0_0_90px_rgba(168,85,247,1)]"
+            className="mx-auto mb-8 h-32 w-32 animate-pulse rounded-[2rem] shadow-[0_0_100px_rgba(168,85,247,1)]"
           />
 
           <p className="mb-4 tracking-[0.55em] text-sm text-purple-300">
@@ -64,18 +64,22 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Early Access"
-              className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_40px_rgba(168,85,247,0.75)] hover:bg-purple-500"
+              className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
             >
               Request Early Access
             </a>
 
             <a
               href="#concept"
-              className="rounded-full border border-purple-500 px-8 py-4 font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:bg-purple-500/20"
+              className="rounded-full border border-purple-500 px-8 py-4 font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)]"
             >
               Watch Concept
             </a>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-purple-300/60">
+          ↓
         </div>
       </section>
 
@@ -83,7 +87,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
 
         <video
-          className="relative z-10 mb-8 h-72 w-72 rounded-full object-cover opacity-90 shadow-[0_0_120px_rgba(168,85,247,1)]"
+          className="relative z-10 mb-8 h-72 w-72 rounded-full object-cover opacity-90 shadow-[0_0_130px_rgba(168,85,247,1)]"
           src="/videos/Pulse_loading.mp4"
           autoPlay
           muted
@@ -122,7 +126,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-purple-500/40 bg-white/5 shadow-[0_0_120px_rgba(168,85,247,0.55)]">
+        <div className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-purple-500/40 bg-white/5 shadow-[0_0_120px_rgba(168,85,247,0.55)] transition-all duration-500 hover:shadow-[0_0_160px_rgba(168,85,247,0.85)]">
           <video
             className="h-full w-full object-cover"
             src="/videos/Concept_video_1.mp4"
@@ -136,10 +140,15 @@ export default function Home() {
 
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
-          {["Discovery", "Connection", "Experiences", "Signal"].map((item) => (
+          {[
+            "Discover Your Signal",
+            "Real Connections",
+            "IRL Experiences",
+            "Find Your Signal",
+          ].map((item) => (
             <div
               key={item}
-              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-8 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur"
+              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-8 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)]"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
                 {item}
