@@ -141,7 +141,7 @@ export default function Home() {
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
           {[
-            "Discover Your Signal",
+            "Discover Nearby Signals",
             "Real Connections",
             "IRL Experiences",
             "Find Your Signal",
