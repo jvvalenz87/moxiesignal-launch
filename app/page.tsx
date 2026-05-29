@@ -21,7 +21,7 @@ export default function Home() {
               className="h-10 w-10 rounded-xl"
             />
             <span className="tracking-[0.35em] text-sm font-semibold">
-              MOXIE PULSE
+              MOXIE
             </span>
           </div>
 
