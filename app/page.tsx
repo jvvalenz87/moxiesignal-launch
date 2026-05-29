@@ -58,12 +58,14 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Founding Member Access"
-              className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
-            >
-              Claim Founding Access
-            </a>
+  <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSfCjUyH8LK5-_vQidvJLCijdsnVF_FfUuWNcdtGFne3rzJjvw/viewform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
+>
+  Claim Founding Access
+</a>
 
             <a
               href="#concept"
