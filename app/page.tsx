@@ -57,16 +57,12 @@ export default function Home() {
             and real-world experiences.
           </p>
 
-          <p className="mx-auto mb-10 max-w-xl text-sm text-purple-200">
-            Want beta access? Email us and we’ll add you to the early list.
-          </p>
-
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Early Access"
+              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Founding Member Access"
               className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
             >
-              Request Early Access
+              Claim Founding Access
             </a>
 
             <a
@@ -75,6 +71,22 @@ export default function Home() {
             >
               Watch Concept
             </a>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-6 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur">
+            <p className="mb-2 text-sm font-semibold tracking-[0.35em] text-purple-300">
+              FOUNDING MEMBER ACCESS
+            </p>
+
+            <h3 className="text-2xl font-bold text-white">
+              Join early and receive 6 months of Premium free.
+            </h3>
+
+            <p className="mt-3 text-sm text-zinc-300">
+              Early adopters will be added to the founding member list and
+              receive complimentary Premium access when Moxie launches. Limited
+              to the first wave of beta users.
+            </p>
           </div>
         </div>
 
@@ -97,11 +109,11 @@ export default function Home() {
 
         <div className="relative z-10">
           <p className="mb-4 tracking-[0.6em] text-sm text-purple-300">
-            COMING SOON
+            MOXIE PULSE
           </p>
 
           <h2 className="mb-6 text-4xl font-bold md:text-6xl">
-            Something powerful is on the way.
+            The wearable companion for real-world connection.
           </h2>
 
           <p className="mx-auto max-w-xl text-zinc-400">
@@ -122,7 +134,7 @@ export default function Home() {
           </p>
 
           <h2 className="text-4xl font-bold md:text-6xl">
-            A glimpse of the signal.
+            A glimpse of what's coming.
           </h2>
         </div>
 
@@ -141,10 +153,10 @@ export default function Home() {
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
           {[
-            "Discover Nearby Signals",
+            "Nearby Discovery",
             "Real Connections",
-            "IRL Experiences",
-            "Find Your Signal",
+            "Group Signals",
+            "Moxie Pulse",
           ].map((item) => (
             <div
               key={item}
