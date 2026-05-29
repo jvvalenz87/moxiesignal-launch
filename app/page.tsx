@@ -117,7 +117,9 @@ export default function Home() {
         className="relative flex min-h-screen flex-col items-center justify-center px-6"
       >
         <div className="mb-10 text-center">
-
+          <p className="mb-4 tracking-[0.5em] text-sm text-purple-300">
+            CONCEPT
+          </p>
 
           <h2 className="text-4xl font-bold md:text-6xl">
             A glimpse of the signal.
