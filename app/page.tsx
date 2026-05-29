@@ -11,7 +11,8 @@ export default function Home() {
           playsInline
         />
 
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/55 to-black" />
+        <div className="absolute bottom-0 left-0 right-0 z-[1] h-64 bg-gradient-to-b from-transparent via-purple-950/25 to-black blur-2xl" />
 
         <nav className="absolute top-0 left-0 z-10 flex w-full items-center justify-between px-8 py-6">
           <div className="flex items-center gap-3">
@@ -78,7 +79,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <section className="relative -mt-20 flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
 
         <video
