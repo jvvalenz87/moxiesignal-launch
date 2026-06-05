@@ -59,7 +59,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
   <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSfCjUyH8LK5-_vQidvJLCijdsnVF_FfUuWNcdtGFne3rzJjvw/viewform"
+  href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
   target="_blank"
   rel="noopener noreferrer"
   className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
@@ -81,7 +81,7 @@ export default function Home() {
             </p>
 
             <h3 className="text-2xl font-bold text-white">
-              Join early and receive 6 months of Premium free.
+              Join the Founding Member Program.
             </h3>
 
             <p className="mt-3 text-sm text-zinc-300">
