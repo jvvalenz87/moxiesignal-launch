@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Moxie",
@@ -72,23 +74,25 @@ export default function PrivacyPolicy() {
 
         <div className="relative z-10 mx-auto max-w-4xl">
           <nav className="mb-14 flex items-center justify-between gap-4">
-            <a href="/" className="flex items-center gap-3">
-              <img
+            <Link href="/" className="flex items-center gap-3">
+              <Image
                 src="/logos/App_Icon.png"
                 alt="Moxie"
+                width={40}
+                height={40}
                 className="h-10 w-10 rounded-xl shadow-[0_0_35px_rgba(168,85,247,0.9)]"
               />
               <span className="tracking-[0.35em] text-sm font-semibold">
                 MOXIE
               </span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/"
               className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
               Home
-            </a>
+            </Link>
           </nav>
 
           <header className="mb-8">
@@ -134,14 +138,17 @@ export default function PrivacyPolicy() {
 
           <footer className="mt-12 border-t border-white/10 pt-8 text-sm text-zinc-500">
             <p>© 2026 Moxie. All rights reserved.</p>
-            <p className="mt-2">
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+              <Link href="/terms" className="text-purple-300 hover:text-purple-200">
+                Terms of Service
+              </Link>
               <a
                 href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Privacy"
                 className="text-purple-300 hover:text-purple-200"
               >
                 moxiepulsesocial@gmail.com
               </a>
-            </p>
+            </div>
           </footer>
         </div>
       </section>

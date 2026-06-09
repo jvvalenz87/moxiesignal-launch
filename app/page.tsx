@@ -1,7 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <section className="relative flex min-h-[100svh] flex-col items-center justify-center px-5 pb-16 pt-28 text-center sm:px-6 sm:pt-32">
         <video
           className="absolute inset-0 h-full w-full object-cover opacity-40"
           src="/videos/Concept_video_2.mp4"
@@ -14,80 +17,84 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/55 to-black" />
         <div className="absolute bottom-0 left-0 right-0 z-[1] h-64 bg-gradient-to-b from-transparent via-purple-950/25 to-black blur-2xl" />
 
-        <nav className="absolute top-0 left-0 z-10 flex w-full items-center justify-between px-8 py-6">
+        <nav className="absolute left-0 top-0 z-10 flex w-full items-center justify-between gap-3 px-4 py-4 sm:px-8 sm:py-6">
           <div className="flex items-center gap-3">
-            <img
+            <Image
               src="/logos/App_Icon.png"
               alt="Moxie"
-              className="h-10 w-10 rounded-xl shadow-[0_0_35px_rgba(168,85,247,0.9)]"
+              width={40}
+              height={40}
+              className="h-9 w-9 rounded-xl shadow-[0_0_35px_rgba(168,85,247,0.9)] sm:h-10 sm:w-10"
             />
-            <span className="tracking-[0.35em] text-sm font-semibold">
+            <span className="hidden tracking-[0.35em] text-sm font-semibold sm:inline">
               MOXIE
             </span>
           </div>
 
           <a
-            href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
-            className="rounded-full border border-purple-500 px-5 py-2 text-sm text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_40px_rgba(168,85,247,0.75)]"
+            href="#contact"
+            className="whitespace-nowrap rounded-full border border-purple-500 px-4 py-2 text-xs font-semibold text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_40px_rgba(168,85,247,0.75)] sm:px-5 sm:text-sm"
           >
             Contact
           </a>
         </nav>
 
-        <div className="relative z-10 max-w-4xl">
-          <img
+        <div className="relative z-10 w-full max-w-4xl">
+          <Image
             src="/logos/App_Icon.png"
             alt="Moxie Logo"
-            className="mx-auto mb-8 h-32 w-32 animate-pulse rounded-[2rem] shadow-[0_0_100px_rgba(168,85,247,1)]"
+            width={128}
+            height={128}
+            priority
+            className="mx-auto mb-7 h-24 w-24 animate-pulse rounded-[1.6rem] shadow-[0_0_85px_rgba(168,85,247,1)] sm:h-32 sm:w-32 sm:rounded-[2rem]"
           />
 
-          <p className="mb-4 tracking-[0.55em] text-sm text-purple-300">
-            LAUNCHING SOON
+          <p className="mb-4 text-xs font-semibold tracking-[0.36em] text-purple-300 sm:text-sm sm:tracking-[0.55em]">
+            PRIVATE BETA
           </p>
 
-          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="mx-auto mb-6 max-w-3xl text-4xl font-bold leading-[0.98] tracking-tight sm:text-5xl md:text-7xl">
             DISCOVER YOUR{" "}
             <span className="bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">
               SIGNAL
             </span>
           </h1>
 
-          <p className="mx-auto mb-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
-            A new way to connect through proximity, shared interests,
-            and real-world experiences.
+          <p className="mx-auto mb-6 max-w-xl text-base leading-7 text-zinc-300 sm:text-lg md:text-xl">
+            A private first look at a new social layer for real-world energy.
+            Founding access opens in limited waves.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-  <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full bg-purple-600 px-8 py-4 font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)]"
->
-  Claim Founding Access
-</a>
+          <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)] sm:px-8"
+            >
+              Claim Founding Access
+            </a>
 
             <a
               href="#concept"
-              className="rounded-full border border-purple-500 px-8 py-4 font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)]"
+              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)] sm:px-8"
             >
               Watch Concept
             </a>
           </div>
 
-          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-6 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur">
-            <p className="mb-2 text-sm font-semibold tracking-[0.35em] text-purple-300">
-              FOUNDING MEMBER ACCESS
+          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
+            <p className="mb-2 text-xs font-semibold tracking-[0.28em] text-purple-300 sm:text-sm sm:tracking-[0.35em]">
+              FOUNDING ACCESS
             </p>
 
-            <h3 className="text-2xl font-bold text-white">
-              Join the Founding Member Program.
+            <h3 className="text-xl font-bold text-white sm:text-2xl">
+              Join the first wave.
             </h3>
 
-            <p className="mt-3 text-sm text-zinc-300">
-              Early adopters will be added to the founding member list and
-              receive complimentary Premium access when Moxie launches. Limited
-              to the first wave of beta users.
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              Early members will receive priority beta access and launch-day
+              founder perks. Space is intentionally limited.
             </p>
           </div>
         </div>
@@ -97,11 +104,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative -mt-20 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <section className="relative flex min-h-[88svh] flex-col items-center justify-center px-5 py-20 text-center sm:-mt-20 sm:min-h-screen sm:px-6">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
 
         <video
-          className="relative z-10 mb-8 h-72 w-72 rounded-full object-cover opacity-90 shadow-[0_0_130px_rgba(168,85,247,1)]"
+          className="relative z-10 mb-8 h-56 w-56 rounded-full object-cover opacity-90 shadow-[0_0_105px_rgba(168,85,247,1)] sm:h-72 sm:w-72"
           src="/videos/Pulse_loading.mp4"
           autoPlay
           muted
@@ -110,37 +117,36 @@ export default function Home() {
         />
 
         <div className="relative z-10">
-          <p className="mb-4 tracking-[0.6em] text-sm text-purple-300">
-            MOXIE PULSE
+          <p className="mb-4 text-xs font-semibold tracking-[0.42em] text-purple-300 sm:text-sm sm:tracking-[0.6em]">
+            THE SIGNAL
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-6xl">
-            The wearable companion for real-world connection.
+          <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
+            Designed to make connection feel more natural.
           </h2>
 
-          <p className="mx-auto max-w-xl text-zinc-400">
-            Moxie is building a new layer for discovery, connection,
-            and real-world social energy — with Moxie Pulse as the wearable
-            signal companion.
+          <p className="mx-auto max-w-xl leading-7 text-zinc-400">
+            We are keeping the full experience private while the founding
+            circle takes shape.
           </p>
         </div>
       </section>
 
       <section
         id="concept"
-        className="relative flex min-h-screen flex-col items-center justify-center px-6"
+        className="relative flex min-h-[88svh] flex-col items-center justify-center px-5 py-20 sm:min-h-screen sm:px-6"
       >
         <div className="mb-10 text-center">
-          <p className="mb-4 tracking-[0.5em] text-sm text-purple-300">
+          <p className="mb-4 text-xs font-semibold tracking-[0.38em] text-purple-300 sm:text-sm sm:tracking-[0.5em]">
             CONCEPT
           </p>
 
-          <h2 className="text-4xl font-bold md:text-6xl">
-            A glimpse of what's coming.
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-6xl">
+            A glimpse of what&apos;s coming.
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-purple-500/40 bg-white/5 shadow-[0_0_120px_rgba(168,85,247,0.55)] transition-all duration-500 hover:shadow-[0_0_160px_rgba(168,85,247,0.85)]">
+        <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-purple-500/40 bg-white/5 shadow-[0_0_95px_rgba(168,85,247,0.5)] transition-all duration-500 hover:shadow-[0_0_130px_rgba(168,85,247,0.78)] sm:rounded-[2rem]">
           <video
             className="h-full w-full object-cover"
             src="/videos/Concept_video_1.mp4"
@@ -152,45 +158,99 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-4">
+      <section className="px-5 py-20 sm:px-6 sm:py-24">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
+            BUILT QUIETLY
+          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            The full details stay inside the beta.
+          </h2>
+        </div>
+
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            "Nearby Discovery",
-            "Real Connections",
-            "Group Signals",
-            "Moxie Pulse",
+            "Private Beta",
+            "Real-World Energy",
+            "Founder Perks",
+            "Early Access",
           ].map((item) => (
             <div
               key={item}
-              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-8 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)]"
+              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)]"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
                 {item}
               </h3>
-              <p className="text-sm text-zinc-400">
-                Part of a new way to connect in the real world.
+              <p className="text-sm leading-6 text-zinc-400">
+                Reserved for the first wave while Moxie stays in private
+                development.
               </p>
             </div>
           ))}
         </div>
       </section>
 
+      <section id="contact" className="px-5 py-20 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-purple-500/30 bg-white/[0.05] p-6 text-center shadow-[0_0_65px_rgba(168,85,247,0.24)] backdrop-blur sm:p-10">
+          <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
+            CONTACT
+          </p>
+
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Reach the Moxie team.
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
+            For founding access, beta questions, support, or partnership
+            inquiries, send a note. We are keeping product details private
+            while the first wave forms.
+          </p>
+
+          <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+            <a
+              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
+              className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold text-white shadow-[0_0_45px_rgba(168,85,247,0.72)] transition-all duration-300 hover:bg-purple-500"
+            >
+              Email Moxie
+            </a>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
+            >
+              Request Access
+            </a>
+          </div>
+
+          <p className="mt-5 text-sm text-zinc-500">
+            moxiepulsesocial@gmail.com
+          </p>
+        </div>
+      </section>
+
       <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">
         <p>© 2026 Moxie. All rights reserved.</p>
         <p className="mt-2">moxiepulse.social</p>
-        <p className="mt-1">
-          <a href="/privacy" className="text-purple-300 hover:text-purple-200">
-            Privacy Policy
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <a href="#contact" className="text-purple-300 hover:text-purple-200">
+            Contact
           </a>
-        </p>
-        <p className="mt-1">
+          <Link href="/privacy" className="text-purple-300 hover:text-purple-200">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="text-purple-300 hover:text-purple-200">
+            Terms of Service
+          </Link>
           <a
             href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
             className="text-purple-300 hover:text-purple-200"
           >
             moxiepulsesocial@gmail.com
           </a>
-        </p>
+        </div>
       </footer>
     </main>
   );
