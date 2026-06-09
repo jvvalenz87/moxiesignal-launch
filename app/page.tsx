@@ -179,6 +179,11 @@ export default function Home() {
         <p>© 2026 Moxie. All rights reserved.</p>
         <p className="mt-2">moxiepulse.social</p>
         <p className="mt-1">
+          <a href="/privacy" className="text-purple-300 hover:text-purple-200">
+            Privacy Policy
+          </a>
+        </p>
+        <p className="mt-1">
           <a
             href="mailto:moxiepulsesocial@gmail.com?subject=Moxie Contact"
             className="text-purple-300 hover:text-purple-200"
