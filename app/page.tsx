@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const testFlightUrl = "https://testflight.apple.com/join/Hjwm71W9";
+const waitlistUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor";
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
@@ -31,12 +35,22 @@ export default function Home() {
             </span>
           </div>
 
-          <a
-            href="#contact"
-            className="whitespace-nowrap rounded-full border border-purple-500 px-4 py-2 text-xs font-semibold text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_40px_rgba(168,85,247,0.75)] sm:px-5 sm:text-sm"
-          >
-            Contact
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="#contact"
+              className="whitespace-nowrap rounded-full border border-purple-500/70 px-4 py-2 text-xs font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20 sm:px-5 sm:text-sm"
+            >
+              Contact
+            </a>
+            <a
+              href={testFlightUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.55)] transition-all duration-300 hover:bg-purple-500 sm:px-5 sm:text-sm"
+            >
+              Join Beta
+            </a>
+          </div>
         </nav>
 
         <div className="relative z-10 w-full max-w-4xl">
@@ -62,40 +76,79 @@ export default function Home() {
 
           <p className="mx-auto mb-6 max-w-xl text-base leading-7 text-zinc-300 sm:text-lg md:text-xl">
             A private first look at a new social layer for real-world energy.
-            Founding access opens in limited waves.
+            Moxie is in limited TestFlight beta while the founding circle takes
+            shape.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
+              href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)] sm:px-8"
             >
-              Claim Founding Access
+              Join the iPhone Beta
             </a>
 
             <a
-              href="#concept"
+              href={waitlistUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)] sm:px-8"
             >
-              Watch Concept
+              Join the Waitlist
             </a>
           </div>
 
-          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
-            <p className="mb-2 text-xs font-semibold tracking-[0.28em] text-purple-300 sm:text-sm sm:tracking-[0.35em]">
-              FOUNDING ACCESS
-            </p>
+          <a
+            href="#concept"
+            className="mt-5 inline-flex text-sm font-semibold text-purple-300 underline-offset-4 transition-colors hover:text-purple-200 hover:underline"
+          >
+            Watch Concept
+          </a>
 
-            <h3 className="text-xl font-bold text-white sm:text-2xl">
-              Join the first wave.
-            </h3>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-zinc-400">
+            Requires Apple TestFlight. Features may change as we learn from
+            early testers.
+          </p>
 
-            <p className="mt-3 text-sm leading-6 text-zinc-300">
-              Early members will receive priority beta access and launch-day
-              founder perks. Space is intentionally limited.
-            </p>
+          <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
+            <div className="grid items-center gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:text-left">
+              <div>
+                <p className="mb-2 text-xs font-semibold tracking-[0.28em] text-purple-300 sm:text-sm sm:tracking-[0.35em]">
+                  FOUNDING ACCESS
+                </p>
+
+                <h3 className="text-xl font-bold text-white sm:text-2xl">
+                  Join the first wave, thoughtfully.
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  Tap the beta link or scan from your iPhone to join the
+                  current TestFlight. The waitlist stays open for later invite
+                  waves and launch-day founder updates.
+                </p>
+              </div>
+
+              <a
+                href={testFlightUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Join the Moxie TestFlight beta"
+                className="mx-auto flex w-44 shrink-0 flex-col items-center gap-3 text-center text-xs font-semibold tracking-[0.18em] text-purple-200 transition-transform duration-300 hover:scale-[1.03] sm:mx-0"
+              >
+                <span className="block rounded-2xl bg-white p-3 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                  <Image
+                    src="/moxie-testflight-qr.svg"
+                    alt="QR code for the Moxie TestFlight beta"
+                    width={152}
+                    height={152}
+                    className="h-36 w-36"
+                  />
+                </span>
+                SCAN FROM IPHONE
+              </a>
+            </div>
           </div>
         </div>
 
@@ -203,8 +256,8 @@ export default function Home() {
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
             For founding access, beta questions, support, or partnership
-            inquiries, send a note. We are keeping product details private
-            while the first wave forms.
+            inquiries, send a note. Moxie is still in limited beta while the
+            first wave forms.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
@@ -216,12 +269,21 @@ export default function Home() {
             </a>
 
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor"
+              href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
-              Request Access
+              Join Beta
+            </a>
+
+            <a
+              href={waitlistUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
+            >
+              Join Waitlist
             </a>
           </div>
 
@@ -233,7 +295,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">
         <p>© 2026 Moxie. All rights reserved.</p>
-        <p className="mt-2">moxiepulse.social</p>
+        <p className="mt-2">moxiesignal.com</p>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
           <a href="#contact" className="text-purple-300 hover:text-purple-200">
             Contact
