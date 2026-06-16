@@ -4,6 +4,7 @@ import Link from "next/link";
 const testFlightUrl = "https://testflight.apple.com/join/Hjwm71W9";
 const waitlistUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor";
+const instagramUrl = "https://www.instagram.com/moxiepulsesocial/";
 
 export default function Home() {
   return (
@@ -269,6 +270,15 @@ export default function Home() {
             </a>
 
             <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-fuchsia-400/80 px-7 py-4 text-center font-semibold text-fuchsia-200 transition-all duration-300 hover:bg-fuchsia-500/20"
+            >
+              Instagram
+            </a>
+
+            <a
               href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -299,6 +309,14 @@ export default function Home() {
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
           <a href="#contact" className="text-purple-300 hover:text-purple-200">
             Contact
+          </a>
+          <a
+            href={instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-300 hover:text-purple-200"
+          >
+            Instagram
           </a>
           <Link href="/privacy" className="text-purple-300 hover:text-purple-200">
             Privacy Policy
