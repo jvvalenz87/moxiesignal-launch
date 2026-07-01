@@ -5,6 +5,33 @@ const testFlightUrl = "https://testflight.apple.com/join/Hjwm71W9";
 const waitlistUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor";
 const instagramUrl = "https://www.instagram.com/moxiepulsesocial/";
+const tiktokUrl = "https://www.tiktok.com/@moxiepulse";
+
+const signalPoints = [
+  "Real connections",
+  "No swiping",
+  "Nearby matches",
+  "Find your tribe",
+];
+
+const betaHighlights = [
+  {
+    title: "Private Beta",
+    body: "Step into the first invite wave before the public launch and help shape how Moxie feels in real places.",
+  },
+  {
+    title: "Real-World Energy",
+    body: "Discover nearby people, events, and communities that match your vibe without getting trapped in another scroll.",
+  },
+  {
+    title: "Founder Perks",
+    body: "Founding members are first in line for launch rewards, Premium access windows, and early feature drops.",
+  },
+  {
+    title: "Early Access",
+    body: "Try proximity matching, group signals, and Moxie Pulse concepts while the next layer of social connection is being built.",
+  },
+];
 
 export default function Home() {
   return (
@@ -76,10 +103,21 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mb-6 max-w-xl text-base leading-7 text-zinc-300 sm:text-lg md:text-xl">
-            A private first look at a new social layer for real-world energy.
-            Moxie is in limited TestFlight beta while the founding circle takes
-            shape.
+            Real connections, no endless swiping. Moxie helps you find nearby
+            people who match your energy, join your community, and turn shared
+            places into actual moments.
           </p>
+
+          <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-2">
+            {signalPoints.map((point) => (
+              <span
+                key={point}
+                className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-100 shadow-[0_0_22px_rgba(34,211,238,0.18)] backdrop-blur sm:text-sm"
+              >
+                {point}
+              </span>
+            ))}
+          </div>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
             <a
@@ -98,6 +136,26 @@ export default function Home() {
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)] sm:px-8"
             >
               Join the Waitlist
+            </a>
+          </div>
+
+          <div className="mx-auto mt-5 grid w-full max-w-sm grid-cols-2 gap-3">
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-fuchsia-300/70 bg-fuchsia-500/15 px-3 py-3 text-center text-xs font-semibold text-fuchsia-100 shadow-[0_0_35px_rgba(217,70,239,0.35)] transition-all duration-300 hover:bg-fuchsia-500/25 hover:shadow-[0_0_55px_rgba(217,70,239,0.55)] sm:text-sm"
+            >
+              Instagram
+            </a>
+
+            <a
+              href={tiktokUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-cyan-300/70 bg-cyan-400/15 px-3 py-3 text-center text-xs font-semibold text-cyan-100 shadow-[0_0_35px_rgba(34,211,238,0.35)] transition-all duration-300 hover:bg-cyan-400/25 hover:shadow-[0_0_55px_rgba(34,211,238,0.55)] sm:text-sm"
+            >
+              TikTok @moxiepulse
             </a>
           </div>
 
@@ -176,12 +234,13 @@ export default function Home() {
           </p>
 
           <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
-            Designed to make connection feel more natural.
+            Discover the new way to interact with people around you.
           </h2>
 
           <p className="mx-auto max-w-xl leading-7 text-zinc-400">
-            We are keeping the full experience private while the founding
-            circle takes shape.
+            Moxie is built for the moments that apps usually miss: the people
+            nearby, the group you actually want to join, and the signal that
+            turns a place into a community.
           </p>
         </div>
       </section>
@@ -215,30 +274,29 @@ export default function Home() {
       <section className="px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto mb-10 max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
-            BUILT QUIETLY
+            FOUNDING BETA
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            The full details stay inside the beta.
+            Be early to the social app built for real life.
           </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
+            The next wave of social connection should feel alive, local, and
+            mutual. Moxie is opening carefully so the first community can help
+            define what comes next.
+          </p>
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Private Beta",
-            "Real-World Energy",
-            "Founder Perks",
-            "Early Access",
-          ].map((item) => (
+          {betaHighlights.map((item) => (
             <div
-              key={item}
+              key={item.title}
               className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)]"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
-                {item}
+                {item.title}
               </h3>
               <p className="text-sm leading-6 text-zinc-400">
-                Reserved for the first wave while Moxie stays in private
-                development.
+                {item.body}
               </p>
             </div>
           ))}
@@ -252,16 +310,16 @@ export default function Home() {
           </p>
 
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Reach the Moxie team.
+            Join the founding circle.
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            For founding access, beta questions, support, or partnership
-            inquiries, send a note. Moxie is still in limited beta while the
-            first wave forms.
+            Claim your beta spot, follow the build, or reach out about campus,
+            creator, and local community partnerships. The first wave is where
+            Moxie starts to feel inevitable.
           </p>
 
-          <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+          <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
             <a
               href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
               className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold text-white shadow-[0_0_45px_rgba(168,85,247,0.72)] transition-all duration-300 hover:bg-purple-500"
@@ -273,9 +331,18 @@ export default function Home() {
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-fuchsia-400/80 px-7 py-4 text-center font-semibold text-fuchsia-200 transition-all duration-300 hover:bg-fuchsia-500/20"
+              className="rounded-full border border-fuchsia-300/80 bg-fuchsia-500/15 px-7 py-4 text-center font-semibold text-fuchsia-100 shadow-[0_0_35px_rgba(217,70,239,0.32)] transition-all duration-300 hover:bg-fuchsia-500/25"
             >
-              Instagram
+              Follow Instagram
+            </a>
+
+            <a
+              href={tiktokUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-cyan-300/80 bg-cyan-400/15 px-7 py-4 text-center font-semibold text-cyan-100 shadow-[0_0_35px_rgba(34,211,238,0.32)] transition-all duration-300 hover:bg-cyan-400/25"
+            >
+              TikTok @moxiepulse
             </a>
 
             <a
@@ -307,7 +374,10 @@ export default function Home() {
         <p>© 2026 Moxie. All rights reserved.</p>
         <p className="mt-2">moxiesignal.com</p>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-          <a href="#contact" className="text-purple-300 hover:text-purple-200">
+          <a
+            href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
+            className="text-purple-300 hover:text-purple-200"
+          >
             Contact
           </a>
           <a
@@ -317,6 +387,14 @@ export default function Home() {
             className="text-purple-300 hover:text-purple-200"
           >
             Instagram
+          </a>
+          <a
+            href={tiktokUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 hover:text-cyan-200"
+          >
+            TikTok @moxiepulse
           </a>
           <Link href="/privacy" className="text-purple-300 hover:text-purple-200">
             Privacy Policy
