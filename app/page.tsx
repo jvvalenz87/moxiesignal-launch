@@ -101,10 +101,6 @@ export default function Home() {
             places into actual moments.
           </p>
 
-          <p className="mx-auto max-w-2xl text-xs font-semibold uppercase leading-6 tracking-[0.28em] text-purple-200/80 sm:text-sm sm:tracking-[0.34em]">
-            Real connections / no swiping / nearby matches / find your tribe
-          </p>
-
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
             <a
               href={testFlightUrl}
