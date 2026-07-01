@@ -7,13 +7,6 @@ const waitlistUrl =
 const instagramUrl = "https://www.instagram.com/moxiepulsesocial/";
 const tiktokUrl = "https://www.tiktok.com/@moxiepulse";
 
-const signalPoints = [
-  "Real connections",
-  "No swiping",
-  "Nearby matches",
-  "Find your tribe",
-];
-
 const betaHighlights = [
   {
     title: "Private Beta",
@@ -108,23 +101,16 @@ export default function Home() {
             places into actual moments.
           </p>
 
-          <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-2">
-            {signalPoints.map((point) => (
-              <span
-                key={point}
-                className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-100 shadow-[0_0_22px_rgba(34,211,238,0.18)] backdrop-blur sm:text-sm"
-              >
-                {point}
-              </span>
-            ))}
-          </div>
+          <p className="mx-auto max-w-2xl text-xs font-semibold uppercase leading-6 tracking-[0.28em] text-purple-200/80 sm:text-sm sm:tracking-[0.34em]">
+            Real connections / no swiping / nearby matches / find your tribe
+          </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
             <a
               href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold shadow-[0_0_45px_rgba(168,85,247,0.85)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_65px_rgba(168,85,247,1)] sm:px-8"
+              className="rounded-full bg-purple-600 px-8 py-4 text-center text-base font-bold text-white shadow-[0_0_55px_rgba(168,85,247,0.95)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_75px_rgba(168,85,247,1)] sm:px-10 sm:text-lg"
             >
               Join the iPhone Beta
             </a>
@@ -133,38 +119,42 @@ export default function Home() {
               href={waitlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.45)] transition-all duration-300 hover:bg-purple-500/20 hover:shadow-[0_0_50px_rgba(168,85,247,0.75)] sm:px-8"
+              className="rounded-full border border-purple-500/80 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20 sm:px-8"
             >
               Join the Waitlist
             </a>
           </div>
 
-          <div className="mx-auto mt-5 grid w-full max-w-sm grid-cols-2 gap-3">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm font-semibold">
             <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-fuchsia-300/70 bg-fuchsia-500/15 px-3 py-3 text-center text-xs font-semibold text-fuchsia-100 shadow-[0_0_35px_rgba(217,70,239,0.35)] transition-all duration-300 hover:bg-fuchsia-500/25 hover:shadow-[0_0_55px_rgba(217,70,239,0.55)] sm:text-sm"
+              className="text-fuchsia-200 underline-offset-4 transition-colors hover:text-fuchsia-100 hover:underline"
             >
               Instagram
             </a>
+
+            <span className="text-zinc-600">/</span>
 
             <a
               href={tiktokUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-cyan-300/70 bg-cyan-400/15 px-3 py-3 text-center text-xs font-semibold text-cyan-100 shadow-[0_0_35px_rgba(34,211,238,0.35)] transition-all duration-300 hover:bg-cyan-400/25 hover:shadow-[0_0_55px_rgba(34,211,238,0.55)] sm:text-sm"
+              className="text-cyan-200 underline-offset-4 transition-colors hover:text-cyan-100 hover:underline"
             >
               TikTok @moxiepulse
             </a>
-          </div>
 
-          <a
-            href="#concept"
-            className="mt-5 inline-flex text-sm font-semibold text-purple-300 underline-offset-4 transition-colors hover:text-purple-200 hover:underline"
-          >
-            Watch Concept
-          </a>
+            <span className="text-zinc-600">/</span>
+
+            <a
+              href="#concept"
+              className="text-purple-300 underline-offset-4 transition-colors hover:text-purple-200 hover:underline"
+            >
+              Watch Concept
+            </a>
+          </div>
 
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-zinc-400">
             Requires Apple TestFlight. Features may change as we learn from
@@ -321,17 +311,10 @@ export default function Home() {
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
             <a
-              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
-              className="rounded-full bg-purple-600 px-7 py-4 text-center font-semibold text-white shadow-[0_0_45px_rgba(168,85,247,0.72)] transition-all duration-300 hover:bg-purple-500"
-            >
-              Email Moxie
-            </a>
-
-            <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-fuchsia-300/80 bg-fuchsia-500/15 px-7 py-4 text-center font-semibold text-fuchsia-100 shadow-[0_0_35px_rgba(217,70,239,0.32)] transition-all duration-300 hover:bg-fuchsia-500/25"
+              className="rounded-full bg-fuchsia-600 px-7 py-4 text-center font-semibold text-white shadow-[0_0_45px_rgba(217,70,239,0.72)] transition-all duration-300 hover:bg-fuchsia-500"
             >
               Follow Instagram
             </a>
@@ -361,6 +344,13 @@ export default function Home() {
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
               Join Waitlist
+            </a>
+
+            <a
+              href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
+              className="rounded-full border border-purple-500/70 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
+            >
+              Email Moxie
             </a>
           </div>
 
