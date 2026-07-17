@@ -223,7 +223,7 @@ export default function Home() {
             >
               Apple&apos;s official TestFlight app
             </a>
-            . Features may change as we learn from early testers.
+            .
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
