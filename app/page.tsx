@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const testFlightUrl = "https://testflight.apple.com/join/Hjwm71W9";
+const testFlightAppUrl = "https://apps.apple.com/us/app/testflight/id899247664";
 const waitlistUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSfbmlMxTN067WTq2L3zGA3CW6s6ZbmqvUshM3nZv146yHXx-g/viewform?usp=publish-editor";
 const instagramUrl = "https://www.instagram.com/moxiepulsesocial/";
@@ -10,7 +11,7 @@ const tiktokUrl = "https://www.tiktok.com/@moxiepulse";
 const betaHighlights = [
   {
     title: "Private Beta",
-    body: "Step into the first invite wave before the public launch and help shape how Moxie feels in real places.",
+    body: "Step into the first invite wave before the public launch and help shape the kind of community Moxie becomes.",
   },
   {
     title: "Real-World Energy",
@@ -18,12 +19,36 @@ const betaHighlights = [
   },
   {
     title: "Founder Perks",
-    body: "Founding members are first in line for launch rewards, Premium access windows, and early feature drops.",
+    body: "The first 10,000 beta users get lifetime Premium founder status, plus first access to launch rewards and early feature drops.",
   },
   {
     title: "Early Access",
-    body: "Try proximity matching, group signals, and Moxie Pulse concepts while the next layer of social connection is being built.",
+    body: "Try proximity matching, group signals, and Moxie Pulse concepts while the first real-world community is being built.",
   },
+];
+
+const campusSignals = [
+  {
+    title: "Not just dating",
+    body: "Use Moxie for community, friends, dating, or networking, depending on what you are open to in that moment.",
+  },
+  {
+    title: "Real-life icebreaker",
+    body: "Find nearby people who share your interests, values, and places you already care about, then make the first hello feel natural.",
+  },
+  {
+    title: "Campus perks",
+    body: "Current students and alumni from GCU, ASU, NAU, U of A, and other college communities will be first in line for special perks and events.",
+  },
+];
+
+const campusCommunities = [
+  "GCU",
+  "ASU",
+  "NAU",
+  "U of A",
+  "College students",
+  "Alumni",
 ];
 
 export default function Home() {
@@ -69,7 +94,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="whitespace-nowrap rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.55)] transition-all duration-300 hover:bg-purple-500 sm:px-5 sm:text-sm"
             >
-              Join Beta
+              Founder Access
             </a>
           </div>
         </nav>
@@ -85,7 +110,7 @@ export default function Home() {
           />
 
           <p className="mb-4 text-xs font-semibold tracking-[0.36em] text-purple-300 sm:text-sm sm:tracking-[0.55em]">
-            PRIVATE BETA
+            PRIVATE BETA / FIRST 10K FOUNDERS
           </p>
 
           <h1 className="mx-auto mb-6 max-w-3xl text-4xl font-bold leading-[0.98] tracking-tight sm:text-5xl md:text-7xl">
@@ -101,6 +126,12 @@ export default function Home() {
             places into actual moments.
           </p>
 
+          <p className="mx-auto max-w-xl text-sm font-semibold leading-6 text-purple-200 sm:text-base">
+            The first 10,000 beta users get lifetime Premium founder status.
+            Don't let another moment pass by without knowing who around you is
+            worth meeting.
+          </p>
+
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
             <a
               href={testFlightUrl}
@@ -108,7 +139,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full bg-purple-600 px-8 py-4 text-center text-base font-bold text-white shadow-[0_0_55px_rgba(168,85,247,0.95)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_75px_rgba(168,85,247,1)] sm:px-10 sm:text-lg"
             >
-              Join the iPhone Beta
+              Claim Founder Access
             </a>
 
             <a
@@ -153,8 +184,16 @@ export default function Home() {
           </div>
 
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-zinc-400">
-            Requires Apple TestFlight. Features may change as we learn from
-            early testers.
+            Moxie beta access opens through{" "}
+            <a
+              href={testFlightAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-cyan-200 underline-offset-4 transition-colors hover:text-cyan-100 hover:underline"
+            >
+              Apple&apos;s official TestFlight app
+            </a>
+            . Features may change as we learn from early testers.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
@@ -165,13 +204,19 @@ export default function Home() {
                 </p>
 
                 <h3 className="text-xl font-bold text-white sm:text-2xl">
-                  Join the first wave, thoughtfully.
+                  The first 10K founders keep Premium status for life.
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-zinc-300">
                   Tap the beta link or scan from your iPhone to join the
-                  current TestFlight. The waitlist stays open for later invite
-                  waves and launch-day founder updates.
+                  current TestFlight. If Moxie feels like your kind of crowd,
+                  get in early and help set the tone before the wider launch.
+                </p>
+
+                <p className="mt-4 text-sm leading-6 text-zinc-400">
+                  TestFlight is Apple&apos;s beta-testing app. Your information
+                  is handled with security in mind, and you stay in control of
+                  what you share through Moxie&apos;s privacy settings.
                 </p>
               </div>
 
@@ -220,7 +265,7 @@ export default function Home() {
           </p>
 
           <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
-            Discover the new way to interact with people around you.
+            Built to revolutionize how you interact with people around you.
           </h2>
 
           <p className="mx-auto max-w-xl leading-7 text-zinc-400">
@@ -266,9 +311,9 @@ export default function Home() {
             Be early to the social app built for real life.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            The next wave of social connection should feel alive, local, and
-            mutual. Moxie is opening carefully so the first community can help
-            define what comes next.
+            Moxie is not trying to be for everyone. The first wave is for people
+            who want social discovery to feel alive, local, mutual, and worth
+            showing up for.
           </p>
         </div>
 
@@ -289,6 +334,50 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-5 pb-8 pt-2 sm:px-6 sm:pb-10">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
+            CAMPUS FIRST
+          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Made to start something in real life.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
+            Moxie is a real-life icebreaker for college life. Meet nearby
+            people who share your interests and values without turning every
+            connection into another endless feed. Come for community, friends,
+            dating, or networking, then take the signal offline.
+          </p>
+        </div>
+
+        <div className="mx-auto mb-8 flex max-w-3xl flex-wrap justify-center gap-2">
+          {campusCommunities.map((community) => (
+            <span
+              key={community}
+              className="rounded-full border border-purple-500/35 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-200 shadow-[0_0_24px_rgba(168,85,247,0.18)]"
+            >
+              {community}
+            </span>
+          ))}
+        </div>
+
+        <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
+          {campusSignals.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.2)] backdrop-blur transition-all duration-300 hover:border-cyan-300/45 hover:shadow-[0_0_70px_rgba(34,211,238,0.24)]"
+            >
+              <h3 className="mb-3 text-xl font-semibold text-purple-300">
+                {item.title}
+              </h3>
+              <p className="text-sm leading-6 text-zinc-400">
+                {item.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="contact" className="px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl rounded-3xl border border-purple-500/30 bg-white/[0.05] p-6 text-center shadow-[0_0_65px_rgba(168,85,247,0.24)] backdrop-blur sm:p-10">
           <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
@@ -296,13 +385,14 @@ export default function Home() {
           </p>
 
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Join the founding circle.
+            Don't let another moment pass by.
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            Claim your beta spot, follow the build, or reach out about campus,
-            creator, and local community partnerships. The first wave is where
-            Moxie starts to feel inevitable.
+            Founding access is limited to the first 10,000 beta users with
+            lifetime Premium status included. Claim your spot, follow the
+            build, or reach out about campus, creator, and local community
+            partnerships.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
@@ -330,7 +420,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
-              Join Beta
+              Claim Premium Status
             </a>
 
             <a
