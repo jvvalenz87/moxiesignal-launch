@@ -43,12 +43,42 @@ const campusSignals = [
 ];
 
 const campusCommunities = [
-  "GCU",
-  "ASU",
-  "NAU",
-  "U of A",
-  "College students",
-  "Alumni",
+  {
+    mark: "GCU",
+    name: "Grand Canyon",
+    accent: "#7c3aed",
+    glow: "rgba(124, 58, 237, 0.38)",
+  },
+  {
+    mark: "ASU",
+    name: "Arizona State",
+    accent: "#ffc627",
+    glow: "rgba(255, 198, 39, 0.28)",
+  },
+  {
+    mark: "NAU",
+    name: "Northern Arizona",
+    accent: "#00a3e0",
+    glow: "rgba(0, 163, 224, 0.3)",
+  },
+  {
+    mark: "UofA",
+    name: "Arizona",
+    accent: "#ab0520",
+    glow: "rgba(171, 5, 32, 0.34)",
+  },
+  {
+    mark: "STU",
+    name: "Students",
+    accent: "#a855f7",
+    glow: "rgba(168, 85, 247, 0.3)",
+  },
+  {
+    mark: "ALM",
+    name: "Alumni",
+    accent: "#22d3ee",
+    glow: "rgba(34, 211, 238, 0.28)",
+  },
 ];
 
 export default function Home() {
@@ -350,14 +380,30 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mx-auto mb-8 flex max-w-3xl flex-wrap justify-center gap-2">
+        <div className="mx-auto mb-10 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {campusCommunities.map((community) => (
-            <span
-              key={community}
-              className="rounded-full border border-purple-500/35 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-200 shadow-[0_0_24px_rgba(168,85,247,0.18)]"
+            <div
+              key={community.mark}
+              className="rounded-3xl border bg-white/[0.045] px-3 py-4 text-center backdrop-blur transition-all duration-300 hover:-translate-y-1 sm:px-4"
+              style={{
+                borderColor: `${community.accent}66`,
+                boxShadow: `0 0 38px ${community.glow}`,
+              }}
             >
-              {community}
-            </span>
+              <span
+                className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border text-xl font-black tracking-[0.04em] text-white sm:h-20 sm:w-20 sm:text-2xl"
+                style={{
+                  borderColor: `${community.accent}80`,
+                  background: `linear-gradient(135deg, ${community.accent}55, rgba(255,255,255,0.06))`,
+                  boxShadow: `inset 0 0 22px ${community.glow}, 0 0 24px ${community.glow}`,
+                }}
+              >
+                {community.mark}
+              </span>
+              <span className="mt-3 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-zinc-300 sm:text-xs">
+                {community.name}
+              </span>
+            </div>
           ))}
         </div>
 
