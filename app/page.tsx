@@ -44,40 +44,34 @@ const campusSignals = [
 
 const campusCommunities = [
   {
-    mark: "GCU",
-    name: "Grand Canyon",
-    accent: "#7c3aed",
-    glow: "rgba(124, 58, 237, 0.38)",
-  },
-  {
     mark: "ASU",
     name: "Arizona State",
-    accent: "#ffc627",
-    glow: "rgba(255, 198, 39, 0.28)",
+    theme: "asu",
+  },
+  {
+    mark: "GCU",
+    name: "Grand Canyon",
+    theme: "gcu",
+  },
+  {
+    mark: "A",
+    name: "The University of Arizona",
+    theme: "arizona",
   },
   {
     mark: "NAU",
     name: "Northern Arizona",
-    accent: "#00a3e0",
-    glow: "rgba(0, 163, 224, 0.3)",
-  },
-  {
-    mark: "UofA",
-    name: "Arizona",
-    accent: "#ab0520",
-    glow: "rgba(171, 5, 32, 0.34)",
+    theme: "nau",
   },
   {
     mark: "STU",
     name: "Students",
-    accent: "#a855f7",
-    glow: "rgba(168, 85, 247, 0.3)",
+    theme: "students",
   },
   {
     mark: "ALM",
     name: "Alumni",
-    accent: "#22d3ee",
-    glow: "rgba(34, 211, 238, 0.28)",
+    theme: "alumni",
   },
 ];
 
@@ -380,32 +374,32 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mx-auto mb-10 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mx-auto mb-5 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {campusCommunities.map((community) => (
             <div
               key={community.mark}
-              className="rounded-3xl border bg-white/[0.045] px-3 py-4 text-center backdrop-blur transition-all duration-300 hover:-translate-y-1 sm:px-4"
-              style={{
-                borderColor: `${community.accent}66`,
-                boxShadow: `0 0 38px ${community.glow}`,
-              }}
+              aria-label={`${community.name} community`}
+              className={`campus-card campus-card-${community.theme}`}
             >
               <span
-                className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border text-xl font-black tracking-[0.04em] text-white sm:h-20 sm:w-20 sm:text-2xl"
-                style={{
-                  borderColor: `${community.accent}80`,
-                  background: `linear-gradient(135deg, ${community.accent}55, rgba(255,255,255,0.06))`,
-                  boxShadow: `inset 0 0 22px ${community.glow}, 0 0 24px ${community.glow}`,
-                }}
+                aria-hidden="true"
+                className={`campus-wordmark campus-wordmark-${community.theme}`}
               >
                 {community.mark}
               </span>
-              <span className="mt-3 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-zinc-300 sm:text-xs">
+              <span
+                aria-hidden="true"
+                className="campus-card-label"
+              >
                 {community.name}
               </span>
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mb-10 max-w-2xl text-center text-[0.68rem] leading-5 text-zinc-600 sm:text-xs">
+          Moxie is independent from and not endorsed by the listed universities.
+        </p>
 
         <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
           {campusSignals.map((item) => (
