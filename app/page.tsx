@@ -8,6 +8,23 @@ const waitlistUrl =
 const instagramUrl = "https://www.instagram.com/moxiepulsesocial/";
 const tiktokUrl = "https://www.tiktok.com/@moxiepulse";
 
+const betaInstallSteps = [
+  {
+    step: "1",
+    title: "Install TestFlight",
+    body: "New to TestFlight? Install Apple's free beta app first.",
+    href: testFlightAppUrl,
+    label: "Install TestFlight",
+  },
+  {
+    step: "2",
+    title: "Open Moxie from this link",
+    body: "Come back here and tap the Moxie beta link. The public invite adds Moxie automatically, with no code.",
+    href: testFlightUrl,
+    label: "Open Moxie Beta",
+  },
+];
+
 const betaHighlights = [
   {
     title: "Private Beta",
@@ -118,7 +135,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="whitespace-nowrap rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.55)] transition-all duration-300 hover:bg-purple-500 sm:px-5 sm:text-sm"
             >
-              Founder Access
+              Open Beta Link
             </a>
           </div>
         </nav>
@@ -163,7 +180,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full bg-purple-600 px-8 py-4 text-center text-base font-bold text-white shadow-[0_0_55px_rgba(168,85,247,0.95)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_75px_rgba(168,85,247,1)] sm:px-10 sm:text-lg"
             >
-              Claim Founder Access
+              Open Moxie Beta
             </a>
 
             <a
@@ -217,7 +234,35 @@ export default function Home() {
             >
               Apple&apos;s official TestFlight app
             </a>
-            .
+            . No invite code is needed for the public beta link.
+          </p>
+
+          <div className="mx-auto mt-7 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
+            {betaInstallSteps.map((item) => (
+              <a
+                key={item.step}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl border border-purple-500/35 bg-black/45 p-4 shadow-[0_0_32px_rgba(168,85,247,0.22)] backdrop-blur transition-all duration-300 hover:border-cyan-300/60 hover:bg-purple-500/10"
+              >
+                <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-black text-white shadow-[0_0_24px_rgba(168,85,247,0.65)]">
+                  {item.step}
+                </span>
+                <h3 className="text-base font-bold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-300">
+                  {item.body}
+                </p>
+                <span className="mt-4 inline-flex text-sm font-bold text-cyan-200 transition-colors group-hover:text-cyan-100">
+                  {item.label}
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <p className="mx-auto mt-4 max-w-2xl rounded-2xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-3 text-sm font-semibold leading-6 text-cyan-100">
+            Seeing a code screen? Close TestFlight, return to moxiesignal.com,
+            and tap Open Moxie Beta again.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-purple-500/40 bg-purple-500/10 px-5 py-5 shadow-[0_0_55px_rgba(168,85,247,0.35)] backdrop-blur sm:px-6">
@@ -232,15 +277,14 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  Tap the beta link or scan from your iPhone to join the
-                  current TestFlight. If Moxie feels like your kind of crowd,
-                  get in early and help set the tone before the wider launch.
+                  Tap the Moxie beta link or scan from your iPhone to join the
+                  current TestFlight. If TestFlight is not installed yet, install
+                  it, return to this page, and tap the Moxie link again.
                 </p>
 
                 <p className="mt-4 text-sm leading-6 text-zinc-400">
-                  TestFlight is Apple&apos;s beta-testing app. Your information
-                  is handled with security in mind, and you stay in control of
-                  what you share through Moxie&apos;s privacy settings.
+                  If you open TestFlight by itself, it may ask for a code. The
+                  public beta invite is the Moxie link on this page.
                 </p>
               </div>
 
@@ -260,7 +304,7 @@ export default function Home() {
                     className="h-36 w-36"
                   />
                 </span>
-                SCAN FROM IPHONE
+                SCAN THE MOXIE BETA LINK
               </a>
             </div>
           </div>
@@ -460,7 +504,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
-              Claim Premium Status
+              Open Moxie Beta
             </a>
 
             <a
