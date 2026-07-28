@@ -27,36 +27,75 @@ const betaInstallSteps = [
 
 const betaHighlights = [
   {
-    title: "Private Beta",
-    body: "Step into the first invite wave before the public launch and help shape the kind of community Moxie becomes.",
+    title: "Values-Based Discovery",
+    body: "Meet people through more than proximity. Shared values, interests, goals, and intentions help make the first hello feel less random.",
   },
   {
-    title: "Real-World Energy",
-    body: "Discover nearby people, events, and communities that match your vibe without getting trapped in another scroll.",
+    title: "Groups That Move",
+    body: "Create circles for study groups, concert crews, gaming squads, faith community, campus friends, or the people you already trust.",
   },
   {
     title: "Founder Perks",
     body: "The first 10,000 beta users get lifetime Premium founder status, plus first access to launch rewards and early feature drops.",
   },
   {
-    title: "Early Access",
-    body: "Try proximity matching, group signals, and Moxie Pulse concepts while the first real-world community is being built.",
+    title: "Nearby Compatibility",
+    body: "Get early access to proximity matching, group signals, and notifications that show who is nearby and what you have in common.",
   },
 ];
 
 const campusSignals = [
   {
-    title: "Not just dating",
-    body: "Use Moxie for community, friends, dating, or networking, depending on what you are open to in that moment.",
+    title: "Values-forward by design",
+    body: "Faith, purpose, lifestyle, interests, and goals can all become part of the signal, especially for students who want aligned community.",
   },
   {
-    title: "Real-life icebreaker",
-    body: "Find nearby people who share your interests, values, and places you already care about, then make the first hello feel natural.",
+    title: "Community before clout",
+    body: "Moxie is for building circles that actually do things together: study after class, show up to events, game online, or make plans nearby.",
   },
   {
-    title: "Campus perks",
-    body: "Current students and alumni from GCU, ASU, NAU, U of A, and other college communities will be first in line for special perks and events.",
+    title: "Friends, networking, and dating",
+    body: "Choose what you are open to, then discover compatible people nearby when the purpose and overlap are mutual.",
   },
+];
+
+const howMoxieWorks = [
+  {
+    eyebrow: "Values",
+    title: "Know what matters before you say hey.",
+    body: "Moxie helps people connect around values, interests, campus life, faith, goals, hobbies, personality, and the kind of connection they are open to.",
+  },
+  {
+    eyebrow: "Groups",
+    title: "Make real circles easy to gather.",
+    body: "Create groups like Group Study, Concert Crew, Gaming Squad, Campus Friends, or Faith Community so your people can coordinate faster.",
+  },
+  {
+    eyebrow: "Signals",
+    title: "Send a quick signal when plans are forming.",
+    body: "A group signal lets your circle know what is happening now, whether you are studying, going out, heading to an event, or jumping online.",
+  },
+  {
+    eyebrow: "Nearby",
+    title: "Find compatible people around you.",
+    body: "Moxie can notify you when someone nearby has meaningful overlap with you, then show the values, interests, or intentions you share.",
+  },
+];
+
+const groupIdeas = [
+  "Group Study",
+  "Concert Crew",
+  "Gaming Squad",
+  "Campus Friends",
+  "Faith Community",
+  "Networking Circle",
+];
+
+const connectionModes = [
+  "Community",
+  "Friends",
+  "Networking",
+  "Dating",
 ];
 
 const campusCommunities = [
@@ -162,15 +201,14 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mb-6 max-w-xl text-base leading-7 text-zinc-300 sm:text-lg md:text-xl">
-            Real connections, no endless swiping. Moxie helps you find nearby
-            people who match your energy, join your community, and turn shared
-            places into actual moments.
+            Real connections, no endless swiping. Moxie helps you meet nearby
+            people through shared values, join the circles that fit your life,
+            and turn shared places into actual moments.
           </p>
 
           <p className="mx-auto max-w-xl text-sm font-semibold leading-6 text-purple-200 sm:text-base">
-            The first 10,000 beta users get lifetime Premium founder status.
-            Don't let another moment pass by without knowing who around you is
-            worth meeting.
+            Built for community, friends, networking, and dating. Starting with
+            campus communities around ASU, GCU, and Arizona students.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
@@ -333,7 +371,7 @@ export default function Home() {
           </p>
 
           <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
-            Built to revolutionize how you interact with people around you.
+            Built to make nearby people feel less unknown.
           </h2>
 
           <p className="mx-auto max-w-xl leading-7 text-zinc-400">
@@ -341,6 +379,137 @@ export default function Home() {
             nearby, the group you actually want to join, and the signal that
             turns a place into a community.
           </p>
+
+          <div className="mx-auto mt-10 grid max-w-5xl gap-4 text-left md:grid-cols-3">
+            <div className="rounded-3xl border border-cyan-300/25 bg-cyan-400/10 p-6 shadow-[0_0_44px_rgba(34,211,238,0.16)] backdrop-blur">
+              <p className="mb-3 text-xs font-bold tracking-[0.28em] text-cyan-200">
+                VALUES
+              </p>
+              <h3 className="text-xl font-bold text-white">
+                Shared beliefs, goals, and interests.
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Discover people who line up with what matters to you, not just
+                who happens to be on the same feed.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-emerald-300/25 bg-emerald-400/10 p-6 shadow-[0_0_44px_rgba(52,211,153,0.14)] backdrop-blur">
+              <p className="mb-3 text-xs font-bold tracking-[0.28em] text-emerald-200">
+                GROUPS
+              </p>
+              <h3 className="text-xl font-bold text-white">
+                Circles for the people you trust.
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Build the crews you actually move with: study, campus friends,
+                events, games, faith groups, and more.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-amber-300/25 bg-amber-400/10 p-6 shadow-[0_0_44px_rgba(251,191,36,0.13)] backdrop-blur">
+              <p className="mb-3 text-xs font-bold tracking-[0.28em] text-amber-200">
+                NEARBY
+              </p>
+              <h3 className="text-xl font-bold text-white">
+                Context when someone compatible is close.
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Get a clearer reason to say hello when Moxie finds meaningful
+                overlap around you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="values"
+        className="relative overflow-hidden px-5 py-20 sm:px-6 sm:py-24"
+      >
+        <div className="moxie-context-bg absolute inset-0" />
+
+        <div className="relative mx-auto max-w-6xl">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-cyan-200">
+              VALUES / GROUPS / NEARBY
+            </p>
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Moxie gives real life a little more context.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base">
+              The app stays simple on purpose: show what you care about, choose
+              what kind of connection you are open to, gather your groups, and
+              notice compatible people nearby when the overlap is worth knowing.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-4">
+            {howMoxieWorks.map((item, index) => (
+              <article
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/[0.045] p-6 shadow-[0_0_44px_rgba(0,0,0,0.22)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/35"
+              >
+                <span className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-black text-black">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mb-3 text-xs font-bold tracking-[0.24em] text-cyan-200">
+                  {item.eyebrow}
+                </p>
+                <h3 className="text-xl font-bold leading-tight text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">
+                  {item.body}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-3xl border border-emerald-300/25 bg-emerald-400/10 p-6 shadow-[0_0_50px_rgba(52,211,153,0.12)] backdrop-blur sm:p-8">
+              <p className="mb-3 text-xs font-bold tracking-[0.28em] text-emerald-200">
+                GROUP IDEAS
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                Create groups for the circles you already live in.
+              </h3>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {groupIdeas.map((group) => (
+                  <span
+                    key={group}
+                    className="rounded-full border border-emerald-200/30 bg-black/35 px-4 py-2 text-sm font-semibold text-emerald-100"
+                  >
+                    {group}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-amber-300/25 bg-amber-400/10 p-6 shadow-[0_0_50px_rgba(251,191,36,0.12)] backdrop-blur sm:p-8">
+              <p className="mb-3 text-xs font-bold tracking-[0.28em] text-amber-200">
+                CONNECTION MODES
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                Use one app for friendship, community, networking, and dating.
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Moxie can show who is nearby and what you have in common, but
+                the connection should still feel mutual, intentional, and in
+                your control.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-4">
+                {connectionModes.map((mode) => (
+                  <span
+                    key={mode}
+                    className="rounded-2xl border border-amber-200/25 bg-black/35 px-3 py-3 text-center text-sm font-bold text-amber-100"
+                  >
+                    {mode}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -379,9 +548,9 @@ export default function Home() {
             Be early to the social app built for real life.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            Moxie is not trying to be for everyone. The first wave is for people
-            who want social discovery to feel alive, local, mutual, and worth
-            showing up for.
+            Moxie is not trying to be for everyone. The first wave is for
+            students and early community builders who want social discovery to
+            feel values-driven, local, mutual, and worth showing up for.
           </p>
         </div>
 
@@ -408,13 +577,14 @@ export default function Home() {
             CAMPUS FIRST
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Made to start something in real life.
+            Starting with ASU, GCU, and Arizona campus life.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
             Moxie is a real-life icebreaker for college life. Meet nearby
-            people who share your interests and values without turning every
-            connection into another endless feed. Come for community, friends,
-            dating, or networking, then take the signal offline.
+            people who share your interests, values, and intentions without
+            turning every connection into another endless feed. Come for
+            community, friends, networking, or dating, then take the signal
+            offline.
           </p>
         </div>
 

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moxie",
+  title: "Moxie | Values-Based Campus Connections",
   description:
-    "Moxie is the private beta for real-life icebreakers, nearby campus connections, and lifetime Premium founder status for the first 10,000 beta users.",
+    "Moxie is the private beta for values-based campus connections, groups, signals, nearby compatibility, friendship, networking, and dating.",
 };
 
 export default function RootLayout({
