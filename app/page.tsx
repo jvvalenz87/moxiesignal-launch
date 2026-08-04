@@ -169,12 +169,14 @@ const quickPeekScreens = [
 
 function AppleMark() {
   return (
-    <span
+    <Image
       aria-hidden="true"
-      className="translate-y-[-0.03em] text-[1.25em] leading-none"
-    >
-      {"\uF8FF"}
-    </span>
+      src="/logos/apple-logo.png"
+      alt=""
+      width={256}
+      height={256}
+      className="h-4 w-4 shrink-0 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.65)] sm:h-5 sm:w-5"
+    />
   );
 }
 
@@ -595,11 +597,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:-mx-6 sm:px-6 lg:mx-auto lg:grid lg:max-w-5xl lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
           {betaHighlights.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)]"
+              className="w-[78vw] max-w-[20rem] shrink-0 snap-center rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.25)] backdrop-blur transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_70px_rgba(168,85,247,0.45)] lg:w-auto lg:max-w-none lg:shrink"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
                 {item.title}
@@ -671,11 +673,11 @@ export default function Home() {
           Moxie is independent from and not endorsed by the listed universities.
         </p>
 
-        <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:-mx-6 sm:px-6 md:mx-auto md:grid md:max-w-5xl md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
           {campusSignals.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.2)] backdrop-blur transition-all duration-300 hover:border-cyan-300/45 hover:shadow-[0_0_70px_rgba(34,211,238,0.24)]"
+              className="w-[78vw] max-w-[20rem] shrink-0 snap-center rounded-3xl border border-purple-500/30 bg-white/[0.04] p-7 text-center shadow-[0_0_45px_rgba(168,85,247,0.2)] backdrop-blur transition-all duration-300 hover:border-cyan-300/45 hover:shadow-[0_0_70px_rgba(34,211,238,0.24)] md:w-auto md:max-w-none md:shrink"
             >
               <h3 className="mb-3 text-xl font-semibold text-purple-300">
                 {item.title}
@@ -688,7 +690,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative px-5 py-20 sm:px-6 sm:py-24">
+      <section className="relative px-5 py-16 sm:px-6 sm:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-cyan-950/10 to-black" />
         <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto mb-10 max-w-2xl text-center">
@@ -704,11 +706,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
             {quickPeekScreens.map((screen, index) => (
               <article
                 key={screen.title}
-                className={`group rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_0_50px_rgba(0,0,0,0.3)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 ${
+                className={`group w-[78vw] max-w-[21rem] shrink-0 snap-center rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_0_50px_rgba(0,0,0,0.3)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 md:w-auto md:max-w-none md:shrink ${
                   index === 1 ? "md:mt-8" : ""
                 }`}
               >
