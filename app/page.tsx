@@ -487,11 +487,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-4">
+          <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
             {howMoxieWorks.map((item, index) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.045] p-6 shadow-[0_0_44px_rgba(0,0,0,0.22)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/35"
+                className="w-[78vw] max-w-[20rem] shrink-0 snap-center rounded-3xl border border-white/10 bg-white/[0.045] p-6 shadow-[0_0_44px_rgba(0,0,0,0.22)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/35 lg:w-auto lg:max-w-none lg:shrink"
               >
                 <span className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-black text-black">
                   {String(index + 1).padStart(2, "0")}
