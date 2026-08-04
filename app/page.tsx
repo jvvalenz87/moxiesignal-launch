@@ -47,7 +47,7 @@ const betaHighlights = [
 const campusSignals = [
   {
     title: "Values-forward by design",
-    body: "Faith, purpose, lifestyle, interests, and goals can all become part of the signal, especially for students who want aligned community.",
+    body: "Faith, purpose, lifestyle, interests, and goals can all become part of the signal for students, alumni, and Valley locals who want aligned community.",
   },
   {
     title: "Community before clout",
@@ -63,7 +63,7 @@ const howMoxieWorks = [
   {
     eyebrow: "Values",
     title: "Know what matters before you say hey.",
-    body: "Moxie helps people connect around values, interests, campus life, faith, goals, hobbies, personality, and the kind of connection they are open to.",
+    body: "Moxie helps people connect around values, interests, local life, faith, goals, hobbies, personality, and the kind of connection they are open to.",
   },
   {
     eyebrow: "Groups",
@@ -98,6 +98,15 @@ const connectionModes = [
   "Dating",
 ];
 
+const valleyCommunities = [
+  "Phoenix",
+  "Scottsdale",
+  "Tempe",
+  "Mesa",
+  "Gilbert",
+  "Surrounding areas",
+];
+
 const campusCommunities = [
   {
     mark: "ASU",
@@ -130,6 +139,44 @@ const campusCommunities = [
     theme: "alumni",
   },
 ];
+
+const quickPeekScreens = [
+  {
+    title: "Discover signals nearby",
+    body: "See compatible people and light signals around real places.",
+    src: "/screenshots/signal-map.png",
+    alt: "Moxie Signal map view showing nearby compatible people",
+    width: 1170,
+    height: 2532,
+  },
+  {
+    title: "Send a group pulse",
+    body: "Let your circle know when something is happening now.",
+    src: "/screenshots/group-pulse.png",
+    alt: "Moxie Group Pulse screen for sending a shared wearable signal",
+    width: 1206,
+    height: 2622,
+  },
+  {
+    title: "Find real overlap",
+    body: "Compatibility, mutual glows, and quick signals keep discovery intentional.",
+    src: "/screenshots/compatible-people.png",
+    alt: "Moxie compatibility profile screen with mutual glow status",
+    width: 1206,
+    height: 2622,
+  },
+];
+
+function AppleMark() {
+  return (
+    <span
+      aria-hidden="true"
+      className="translate-y-[-0.03em] text-[1.25em] leading-none"
+    >
+      {"\uF8FF"}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -172,9 +219,10 @@ export default function Home() {
               href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="whitespace-nowrap rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.55)] transition-all duration-300 hover:bg-purple-500 sm:px-5 sm:text-sm"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.55)] transition-all duration-300 hover:bg-purple-500 sm:px-5 sm:text-sm"
             >
-              Download Moxie
+              <AppleMark />
+              <span>Download Moxie</span>
             </a>
           </div>
         </nav>
@@ -207,8 +255,9 @@ export default function Home() {
           </p>
 
           <p className="mx-auto max-w-xl text-sm font-semibold leading-6 text-purple-200 sm:text-base">
-            Built for community, friends, networking, and dating. Starting with
-            campus communities around ASU, GCU, and Arizona students.
+            Built for community, friends, networking, and dating. Campus-first
+            in Arizona, and already growing across Phoenix, Scottsdale, Tempe,
+            Mesa, Gilbert, and the surrounding Valley.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
@@ -216,18 +265,10 @@ export default function Home() {
               href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-purple-600 px-8 py-4 text-center text-base font-bold text-white shadow-[0_0_55px_rgba(168,85,247,0.95)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_75px_rgba(168,85,247,1)] sm:px-10 sm:text-lg"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-purple-600 px-8 py-4 text-center text-base font-bold text-white shadow-[0_0_55px_rgba(168,85,247,0.95)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_75px_rgba(168,85,247,1)] sm:px-10 sm:text-lg"
             >
-              Download Moxie for iPhone or iPad
-            </a>
-
-            <a
-              href={waitlistUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-purple-500/80 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20 sm:px-8"
-            >
-              Join the Waitlist
+              <AppleMark />
+              <span>Download Moxie for iPhone or iPad</span>
             </a>
           </div>
 
@@ -548,9 +589,9 @@ export default function Home() {
             Be early to the social app built for real life.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            Moxie is not trying to be for everyone. The first wave is for
-            students and early community builders who want social discovery to
-            feel values-driven, local, mutual, and worth showing up for.
+            The first wave is for students, alumni, and local community builders
+            who want social discovery to feel values-driven, local, mutual, and
+            worth showing up for.
           </p>
         </div>
 
@@ -577,15 +618,30 @@ export default function Home() {
             CAMPUS FIRST
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Starting with ASU, GCU, and Arizona campus life.
+            Campus first, but not campus only.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
-            Moxie is a real-life icebreaker for college life. Meet nearby
-            people who share your interests, values, and intentions without
-            turning every connection into another endless feed. Come for
-            community, friends, networking, or dating, then take the signal
-            offline.
+            Moxie is not only for current university students or alumni. It is
+            for everyone looking for real connections: people who share your
+            interests, values, and intentions without turning every connection
+            into another endless feed.
           </p>
+          <div className="mx-auto mt-6 max-w-3xl rounded-3xl border border-cyan-300/25 bg-cyan-400/10 px-5 py-5 shadow-[0_0_48px_rgba(34,211,238,0.14)] backdrop-blur sm:px-7">
+            <p className="text-sm font-semibold leading-6 text-cyan-100 sm:text-base">
+              The Moxie community is already growing around the Valley: Phoenix,
+              Scottsdale, Tempe, Mesa, Gilbert, and surrounding areas.
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
+              {valleyCommunities.map((city) => (
+                <span
+                  key={city}
+                  className="rounded-full border border-cyan-200/25 bg-black/35 px-3 py-1.5 text-xs font-bold text-cyan-100"
+                >
+                  {city}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto mb-5 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
@@ -632,6 +688,54 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative px-5 py-20 sm:px-6 sm:py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-cyan-950/10 to-black" />
+        <div className="relative mx-auto max-w-6xl">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-cyan-200">
+              QUICK PEEK
+            </p>
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+              See the signal before you join.
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-zinc-400 sm:text-base">
+              A look at nearby discovery, group pulses, and compatibility inside
+              the Moxie beta.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {quickPeekScreens.map((screen, index) => (
+              <article
+                key={screen.title}
+                className={`group rounded-3xl border border-white/10 bg-white/[0.045] p-3 shadow-[0_0_50px_rgba(0,0,0,0.3)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 ${
+                  index === 1 ? "md:mt-8" : ""
+                }`}
+              >
+                <div className="overflow-hidden rounded-[1.7rem] border border-white/10 bg-black">
+                  <Image
+                    src={screen.src}
+                    alt={screen.alt}
+                    width={screen.width}
+                    height={screen.height}
+                    sizes="(max-width: 768px) 86vw, 30vw"
+                    className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="px-2 pb-2 pt-5 text-center">
+                  <h3 className="text-lg font-bold text-white">
+                    {screen.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-zinc-400">
+                    {screen.body}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="px-5 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl rounded-3xl border border-purple-500/30 bg-white/[0.05] p-6 text-center shadow-[0_0_65px_rgba(168,85,247,0.24)] backdrop-blur sm:p-10">
           <p className="mb-3 text-xs font-semibold tracking-[0.38em] text-purple-300">
@@ -672,18 +776,10 @@ export default function Home() {
               href={testFlightUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
             >
-              Download Moxie for iPhone or iPad
-            </a>
-
-            <a
-              href={waitlistUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-purple-500 px-7 py-4 text-center font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20"
-            >
-              Join Waitlist
+              <AppleMark />
+              <span>Download Moxie for iPhone or iPad</span>
             </a>
 
             <a
@@ -703,6 +799,14 @@ export default function Home() {
       <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-zinc-500">
         <p>© 2026 Moxie. All rights reserved.</p>
         <p className="mt-2">moxiesignal.com</p>
+        <a
+          href={waitlistUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto mt-5 inline-flex rounded-full border border-purple-500/70 px-6 py-3 text-sm font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-500/20 hover:text-purple-200"
+        >
+          Join the Waitlist
+        </a>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
           <a
             href="mailto:moxiepulsesocial@gmail.com?subject=Moxie%20Contact"
